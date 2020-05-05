@@ -50,12 +50,6 @@ output "public_ip" {
 }
 
 
-/**
-provider "aws" {
-  region="eu-west-1"
- // access_key = "AKIAWBOUEDMK73RBRAPG"
-  //secret_key = "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"
-}
 
 resource "aws_s3_bucker" "terraform_state" {
   bucket= "terraform-up-and-running-state"
