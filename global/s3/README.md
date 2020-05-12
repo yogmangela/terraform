@@ -54,6 +54,22 @@ Outputs:
 dynamodb_table_name = terra-state-db-app-ym
 s3_bucket_arn = arn:aws:s3:::terra-state-bucket-app
 ```
+**How to use s3 module**
+```
+provider "aws" {
+  region="eu-west-1"
+  version = "~> 2.0"
+}
+
+module "my-s3" {
+    source = "github.com/yogmangela/terraform//global/s3"
+    my-access-key = "Add your access key"
+    my-secret-key = "add your secrete key"
+}
+
+```
+
+- this will download module under >>`` .terraform>>modules>>my-s3>>global\s3 ``
 
 
 Clean up when you're done:
